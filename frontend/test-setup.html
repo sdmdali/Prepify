@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Configure your Prepify practice test." />
+    <title>Set Up Your Test | Prepify</title>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand">Prepify<span>.</span></a>
+        <div class="nav-actions">
+          <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="test-setup-page container">
+      <section class="setup-heading">
+        <p class="eyebrow">PRACTICE MODE</p>
+        <h1>Build your next challenge.</h1>
+        <p>
+          Customise your test, focus on what matters, and prepare with
+          confidence.
+        </p>
+      </section>
+
+      <form id="test-setup-form" novalidate>
+        <!-- 01: Subject and study material -->
+        <section class="setup-card">
+          <div class="section-kicker">
+            <span>01</span><span>YOUR STUDY MATERIAL</span>
+          </div>
+          <h2>What are we preparing for?</h2>
+          <p class="setup-description">
+            Choose a subject, upload your syllabus, or focus on a topic.
+          </p>
+
+          <div class="form-group">
+            <label for="subject">Choose a subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a subject</option>
+
+              <optgroup label="Computer Science & IT">
+                <option value="programming">Programming Fundamentals</option>
+                <option value="c-programming">C Programming</option>
+                <option value="cpp">C++ Programming</option>
+                <option value="java">Java Programming</option>
+                <option value="python">Python Programming</option>
+                <option value="javascript">JavaScript</option>
+                <option value="web-development">Web Development</option>
+                <option value="data-structures">Data Structures</option>
+                <option value="algorithms">
+                  Design & Analysis of Algorithms
+                </option>
+                <option value="database">Database Management Systems</option>
+                <option value="operating-systems">Operating Systems</option>
+                <option value="networking">Computer Networks</option>
+                <option value="software-engineering">
+                  Software Engineering
+                </option>
+                <option value="computer-architecture">
+                  Computer Architecture
+                </option>
+                <option value="cybersecurity">Cybersecurity</option>
+                <option value="ai-ml">
+                  Artificial Intelligence & Machine Learning
+                </option>
+                <option value="cloud-computing">Cloud Computing</option>
+                <option value="information-systems">Information Systems</option>
+                <option value="computer-graphics">Computer Graphics</option>
+                <option value="mobile-development">
+                  Mobile App Development
+                </option>
+                <option value="computer-organization">
+                  Computer Organization
+                </option>
+                <option value="theory-computation">
+                  Theory of Computation
+                </option>
+                <option value="compiler-design">Compiler Design</option>
+                <option value="distributed-systems">Distributed Systems</option>
+                <option value="devops">DevOps</option>
+              </optgroup>
+
+              <optgroup label="Mathematics & Statistics">
+                <option value="mathematics">Mathematics</option>
+                <option value="calculus">Calculus</option>
+                <option value="real-analysis">Real Analysis</option>
+                <option value="linear-algebra">Linear Algebra</option>
+                <option value="discrete-mathematics">
+                  Discrete Mathematics
+                </option>
+                <option value="statistics">Statistics</option>
+                <option value="probability">Probability</option>
+                <option value="numerical-methods">Numerical Methods</option>
+                <option value="operations-research">Operations Research</option>
+              </optgroup>
+
+              <optgroup label="Science">
+                <option value="physics">Physics</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="biology">Biology</option>
+                <option value="biotechnology">Biotechnology</option>
+                <option value="environmental-science">
+                  Environmental Science
+                </option>
+              </optgroup>
+
+              <optgroup label="Business & Commerce">
+                <option value="accounting">Accounting</option>
+                <option value="economics">Economics</option>
+                <option value="business-management">Business Management</option>
+                <option value="marketing">Marketing</option>
+                <option value="finance">Finance</option>
+                <option value="entrepreneurship">Entrepreneurship</option>
+                <option value="human-resources">
+                  Human Resource Management
+                </option>
+              </optgroup>
+
+              <optgroup label="Humanities & General">
+                <option value="english">English</option>
+                <option value="communication">Communication Skills</option>
+                <option value="history">History</option>
+                <option value="geography">Geography</option>
+                <option value="political-science">Political Science</option>
+                <option value="psychology">Psychology</option>
+                <option value="sociology">Sociology</option>
+                <option value="general-knowledge">General Knowledge</option>
+                <option value="aptitude">Quantitative Aptitude</option>
+                <option value="reasoning">Logical Reasoning</option>
+              </optgroup>
+
+              <option value="other">Other / not listed</option>
+            </select>
+            <p class="field-hint">
+              Can't find your subject? Upload its syllabus or enter a topic.
+            </p>
+          </div>
+
+          <div class="source-divider"><span>OR</span></div>
+
+          <div class="source-grid">
+            <div class="source-option" id="syllabus-option">
+              <div class="source-option-heading">
+                <span class="source-icon" aria-hidden="true">↑</span>
+                <div>
+                  <strong>Upload syllabus</strong>
+                  <small>Generate questions from your syllabus</small>
+                </div>
+              </div>
+
+              <label class="upload-zone" for="syllabus-file" id="upload-zone">
+                <span class="upload-symbol" aria-hidden="true">+</span>
+                <strong id="upload-title">Choose a PDF file</strong>
+                <small id="upload-subtitle">PDF only · Maximum 10 MB</small>
+                <input
+                  type="file"
+                  id="syllabus-file"
+                  name="syllabus"
+                  accept=".pdf,application/pdf"
+                  hidden
+                />
+              </label>
+              <p class="field-hint">
+                Prepify reads the syllabus text and generates questions from its topics.
+              </p>
+            </div>
+
+            <div class="source-option" id="topic-option">
+              <div class="source-option-heading">
+                <span class="source-icon topic-icon" aria-hidden="true">⌕</span>
+                <div>
+                  <strong>Focus on a topic</strong>
+                  <small>Practise a particular chapter</small>
+                </div>
+              </div>
+
+              <div class="form-group topic-field">
+                <label for="topics">Topic or chapter</label>
+                <input
+                  type="text"
+                  id="topics"
+                  name="topics"
+                  placeholder="e.g. Recursion, SQL joins"
+                />
+                <p class="field-hint">Separate multiple topics with commas.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="source-error" id="source-error" role="alert" hidden>
+            Select a subject, upload a syllabus, or enter a topic.
+          </p>
+        </section>
+
+        <!-- 02: Difficulty -->
+        <section class="setup-card">
+          <div class="section-kicker">
+            <span>02</span><span>CHALLENGE LEVEL</span>
+          </div>
+          <h2>Set your difficulty</h2>
+          <p class="setup-description">
+            Choose one level or challenge yourself with all three.
+          </p>
+
+          <div class="difficulty-options">
+            <label class="difficulty-option easy-option">
+              <input type="radio" name="difficulty" value="easy" required />
+              <span class="difficulty-mark">E</span>
+              <span class="difficulty-content">
+                <strong>Easy</strong>
+                <small>Build your basics</small>
+              </span>
+              <span class="difficulty-check">✓</span>
+            </label>
+
+            <label class="difficulty-option medium-option">
+              <input type="radio" name="difficulty" value="medium" />
+              <span class="difficulty-mark">M</span>
+              <span class="difficulty-content">
+                <strong>Medium</strong>
+                <small>Test your understanding</small>
+              </span>
+              <span class="difficulty-check">✓</span>
+            </label>
+
+            <label class="difficulty-option hard-option">
+              <input type="radio" name="difficulty" value="hard" />
+              <span class="difficulty-mark">H</span>
+              <span class="difficulty-content">
+                <strong>Hard</strong>
+                <small
+                  >More questions will be available when the full bank is
+                  loaded</small
+                >
+              </span>
+              <span class="difficulty-check">✓</span>
+            </label>
+
+            <label class="difficulty-option mixed-option">
+              <input type="radio" name="difficulty" value="mixed" checked />
+              <span class="difficulty-mark">E+M+H</span>
+              <span class="difficulty-content">
+                <strong>Mixed difficulty</strong>
+                <small>Easy, medium and hard questions</small>
+              </span>
+              <span class="difficulty-check">✓</span>
+            </label>
+          </div>
+
+          <p class="mixed-note" id="mixed-note" hidden>
+            Mixed mode combines all three difficulty levels. The backend must
+            define their exact proportions.
+          </p>
+        </section>
+
+        <!-- 03: Test settings -->
+        <section class="setup-card">
+          <div class="section-kicker">
+            <span>03</span><span>TEST SETTINGS</span>
+          </div>
+          <h2>Make it yours</h2>
+          <p class="setup-description">
+            Choose how many questions you want and how much time you need.
+          </p>
+
+          <div class="setup-fields">
+            <div class="form-group">
+              <label for="question-count">Number of questions</label>
+              <select id="question-count" name="questionCount" required>
+                <option value="10">10 questions</option>
+                <option value="20" selected>20 questions</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="duration">Test duration</label>
+              <select id="duration" name="duration" required>
+                <option value="15">15 minutes</option>
+                <option value="30" selected>30 minutes</option>
+                <option value="60">60 minutes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="setup-summary" aria-live="polite">
+            <span class="summary-icon">✦</span>
+            <span>
+              <strong id="summary-count">20 questions</strong>
+              <small id="summary-detail">Mixed difficulty · 30 minutes</small>
+            </span>
+          </div>
+        </section>
+
+        <div class="setup-actions">
+          <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+          <button type="submit" class="btn btn-primary" id="start-practice-btn">
+            Build my test <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <p class="setup-footnote">
+          Your settings are saved for this session. PDF processing and question
+          generation require backend integration.
+        </p>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Prepify. Prepare smarter.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/test-setup.js"></script>
+  </body>
+</html>

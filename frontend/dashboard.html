@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Prepify student dashboard.">
+    <title>Dashboard | Prepify</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="index.html" class="brand">Prepify<span>.</span></a>
+
+            <div class="nav-actions">
+                <a href="history.html" class="btn btn-secondary">My History</a>
+                <a href="login.html" class="btn btn-primary">Log out</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard container">
+
+        <section class="dashboard-welcome">
+            <div>
+                <p class="eyebrow">YOUR LEARNING SPACE</p>
+                <h1>Ready to level up?</h1>
+                <p>Choose your practice mode and make every attempt count.</p>
+            </div>
+        </section>
+
+        <section class="dashboard-stats">
+            <article class="stat-card">
+                <span class="stat-label">Tests attempted</span>
+                <h2>0</h2>
+                <p>Your journey starts here</p>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-label">Average score</span>
+                <h2>—</h2>
+                <p>Complete a test to see your score</p>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-label">Study streak</span>
+                <h2>0 days</h2>
+                <p>Build a consistent habit</p>
+            </article>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Choose your mode</h2>
+                    <p class="section-description">Practice at your pace or join a college examination.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-2">
+                <article class="dashboard-mode practice-mode">
+                    <div class="mode-icon">✎</div>
+                    <h3>Practice Mode</h3>
+                    <p>Build confidence with topic-based mock tests. Learn from your mistakes and improve at your own pace.</p>
+                    <a href="test-setup.html" class="btn btn-primary">Start practicing</a>
+                </article>
+
+                <article class="dashboard-mode exam-mode">
+                    <div class="mode-icon">▤</div>
+                    <h3>College Exam Mode</h3>
+                    <p>Join an examination using a code provided by your college or instructor.</p>
+                    <a href="join-exam.html" class="btn btn-secondary">Join an exam</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Quick access</h2>
+                    <p class="section-description">Pick up where you left off.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-2">
+                <a href="history.html" class="quick-link">
+                    <div>
+                        <h3>Test history</h3>
+                        <p>Review your previous attempts and results.</p>
+                    </div>
+                    <span aria-hidden="true">→</span>
+                </a>
+
+                <a href="question-bank.html" class="quick-link">
+                    <div>
+                        <h3>Question bank</h3>
+                        <p>Explore questions and practise specific topics.</p>
+                    </div>
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Prepify. Prepare smarter.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

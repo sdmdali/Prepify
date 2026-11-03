@@ -1,0 +1,50 @@
+{
+  "name": "prepify-backend",
+  "version": "1.0.0",
+  "description": "Prepify backend: Express + MySQL + Google Gemini",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/unit/*.test.js && jest --runInBand",
+    "test:unit": "node --test tests/unit/*.test.js",
+    "db:check": "node scripts/check-database.js",
+    "db:inspect": "node scripts/inspect-schema.js",
+    "db:migrate": "node scripts/run-migrations.js",
+    "db:import-questions": "node scripts/import-questions.js",
+    "admin:promote": "node scripts/promote-admin.js",
+    "test:integration": "node scripts/run-integration-tests.js",
+    "setup:demo": "node scripts/setup-demo.js",
+    "verify:source": "node scripts/verify-source.js",
+    "db:repair-practice": "node scripts/repair-practice-schema.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0",
+    "zod": "^3.23.8",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/integration/**/*.test.js"
+    ],
+    "testTimeout": 20000
+  }
+}

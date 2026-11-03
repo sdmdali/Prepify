@@ -1,0 +1,324 @@
+/* =========================================================
+   PREPIFY RESPONSIVE STYLES
+   Complements the existing stylesheets without redesigning
+   the interface.
+   ========================================================= */
+
+/* Prevent horizontal overflow from wide children. */
+html {
+  width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.container {
+  max-width: 100%;
+}
+
+/* Make common media elements scale with their containers. */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+/* Allow long content to wrap instead of breaking the layout. */
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+label {
+  overflow-wrap: anywhere;
+}
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Improve keyboard focus visibility. */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(185, 127, 138, 0.55);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   TABLETS AND SMALL LAPTOPS
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .container {
+    width: min(100% - 36px, 960px);
+  }
+
+  .section {
+    padding-block: 60px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-stats,
+  .admin-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 80px;
+  }
+
+  .test-setup-page,
+  .admin-page {
+    width: min(100% - 36px, 900px);
+  }
+}
+
+/* =========================================================
+   TABLETS AND LARGE PHONES
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .section {
+    padding-block: 48px;
+  }
+
+  .site-header {
+    height: auto;
+    min-height: 64px;
+  }
+
+  .navbar {
+    min-height: 64px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-block: 12px;
+  }
+
+  .nav-links,
+  .nav-actions {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-stats,
+  .admin-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .dashboard-welcome {
+    padding: 26px;
+  }
+
+  .stat-card,
+  .admin-stat-card {
+    padding: 18px;
+  }
+
+  .setup-card {
+    padding: 22px;
+  }
+
+  .difficulty-options {
+    grid-template-columns: 1fr;
+  }
+
+  .test-header,
+  .test-topbar,
+  .results-header,
+  .admin-dialog-top {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .question-actions {
+    flex-wrap: wrap;
+  }
+
+  .question-actions .btn {
+    flex: 1 1 140px;
+  }
+
+  .question-palette {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .table-wrapper,
+  .table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  dialog {
+    width: min(94vw, 680px);
+    max-width: 94vw;
+    max-height: 88vh;
+    overflow: auto;
+  }
+}
+
+/* =========================================================
+   MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .section {
+    padding-block: 36px;
+  }
+
+  .section-title {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  .nav-links,
+  .nav-actions {
+    width: 100%;
+    gap: 10px 14px;
+  }
+
+  .nav-links a,
+  .login-link {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+
+  .dashboard {
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+
+  .dashboard-welcome {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .dashboard-stats,
+  .admin-overview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card,
+  .admin-stat-card {
+    padding: 18px;
+  }
+
+  .setup-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .test-setup-page,
+  .admin-page {
+    width: calc(100% - 24px);
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+
+  .question-palette {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .question-number {
+    font-size: 0.9rem;
+  }
+
+  .answer-option {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .test-timer {
+    font-size: 0.9rem;
+  }
+
+  .results-card,
+  .card {
+    padding: 18px;
+  }
+
+  .form-group {
+    min-width: 0;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  .admin-dialog-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .admin-dialog-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  dialog {
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    padding: 18px;
+    border-radius: 14px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

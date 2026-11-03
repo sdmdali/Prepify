@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prepify administration dashboard.">
+    <title>Admin Dashboard | Prepify</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="index.html" class="brand">Prepify<span>.</span></a>
+
+            <div class="nav-actions">
+                <span class="admin-role">Administrator</span>
+                <a href="dashboard.html" class="btn btn-secondary">Student View</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-page container">
+
+        <section class="admin-heading">
+            <p class="eyebrow">PLATFORM MANAGEMENT</p>
+            <h1>Admin dashboard</h1>
+            <p>Manage subjects, questions, examinations, and platform content.</p>
+        </section>
+
+        <section class="admin-overview">
+            <article class="admin-stat-card">
+                <span class="admin-stat-label">Total questions</span>
+                <h2>—</h2>
+                <p>Question bank overview</p>
+            </article>
+
+            <article class="admin-stat-card">
+                <span class="admin-stat-label">Subjects</span>
+                <h2>—</h2>
+                <p>Available subject categories</p>
+            </article>
+
+            <article class="admin-stat-card">
+                <span class="admin-stat-label">Examinations</span>
+                <h2>—</h2>
+                <p>Examination management</p>
+            </article>
+        </section>
+
+        <section class="admin-section">
+            <div class="admin-section-heading">
+                <h2>Content management</h2>
+                <p>Manage the academic content available on Prepify.</p>
+            </div>
+
+            <div class="admin-management-grid">
+
+                <article class="admin-management-card">
+                    <div class="admin-card-icon subjects-icon" aria-hidden="true">▤</div>
+                    <h3>Subjects and topics</h3>
+                    <p>Organise subjects and their associated topics.</p>
+                    <button type="button" class="btn btn-secondary" id="manage-subjects-btn">
+                        Manage subjects
+                    </button>
+                </article>
+
+                <article class="admin-management-card">
+                    <div class="admin-card-icon questions-icon" aria-hidden="true">?</div>
+                    <h3>Question bank</h3>
+                    <p>Manage questions, answer options, and difficulty levels.</p>
+                    <button type="button" class="btn btn-secondary" id="manage-questions-btn">
+                        Manage questions
+                    </button>
+                </article>
+
+                <article class="admin-management-card">
+                    <div class="admin-card-icon exams-icon" aria-hidden="true">▣</div>
+                    <h3>College examinations</h3>
+                    <p>Prepare examination content and manage exam setup.</p>
+                    <button type="button" class="btn btn-secondary" id="manage-exams-btn">
+                        Manage examinations
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="admin-section" id="ai-exam-section">
+            <div class="admin-section-heading">
+                <h2>Create an AI-powered college examination</h2>
+                <p>Prepify generates a fixed question paper with AI, then publishes one shared paper for every student who joins this exam.</p>
+            </div>
+            <form id="ai-exam-form" class="admin-exam-form">
+                <label>Examination title<input name="title" type="text" minlength="3" maxlength="200" required placeholder="e.g. Internal Assessment — Data Structures"></label>
+                <label>Subject<select name="subjectId" id="ai-exam-subject" required><option value="">Loading subjects…</option></select></label>
+                <label>Focus topic (optional)<input name="topic" type="text" maxlength="300" placeholder="e.g. Linked lists"></label>
+                <label>Source syllabus PDF (optional)<input name="syllabus" id="ai-exam-pdf" type="file" accept="application/pdf"><small>Text-based PDFs only; maximum 10 MB.</small></label>
+                <label>Difficulty<select name="difficulty"><option value="medium">Medium</option><option value="easy">Easy</option><option value="hard">Hard</option><option value="mixed">Mixed</option></select></label>
+                <label>Number of questions<select name="count"><option>10</option><option>20</option><option>30</option><option>50</option></select></label>
+                <label>Duration (minutes)<input name="durationMinutes" type="number" min="1" max="600" value="60" required></label>
+                <label>Starts at<input name="startsAt" id="ai-exam-starts" type="datetime-local" required></label>
+                <label>Ends at<input name="endsAt" id="ai-exam-ends" type="datetime-local" required></label>
+                <button type="submit" class="btn btn-primary" id="ai-exam-submit">Generate and schedule exam</button>
+                <p id="ai-exam-message" class="admin-exam-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="admin-section">
+            <div class="admin-section-heading">
+                <h2>Recent activity</h2>
+                <p>Platform activity will appear here when records are available.</p>
+            </div>
+
+            <div class="admin-empty-state">
+                <p>No activity to display yet.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Prepify. Administration panel.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

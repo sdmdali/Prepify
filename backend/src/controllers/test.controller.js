@@ -1,0 +1,10 @@
+'use strict';
+const svc = require('../services/test.service');
+const { ok } = require('../utils/respond');
+exports.list = async (req, res) => ok(res, await svc.list(req.user, req.query));
+exports.get = async (req, res) => ok(res, await svc.get(req.user, req.params.id));
+exports.create = async (req, res) => ok(res, await svc.create(req.user, req.body), 201);
+exports.assign = async (req, res) => ok(res, await svc.assignQuestions(req.params.id, req.body.questionIds));
+exports.publish = async (req, res) => ok(res, await svc.publish(req.params.id));
+exports.archive = async (req, res) => ok(res, await svc.archive(req.params.id));
+exports.practice = async (req, res) => ok(res, await svc.generatePractice(req.user, req.body), 201);

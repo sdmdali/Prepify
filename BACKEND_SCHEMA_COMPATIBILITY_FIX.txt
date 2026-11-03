@@ -1,0 +1,11 @@
+Prepify backend schema compatibility patch
+
+This patch preserves the frontend and adapts exam-session repository SQL to the confirmed existing exam_sessions table:
+- exam_code -> join_code
+- title -> exam_name
+- starts_at / ends_at -> scheduled_start_at / scheduled_end_at
+- created_by -> created_by_user_id
+- status values are mapped to the existing uppercase database values and lowercase API values.
+- Activity logging uses event_type and occurred_at.
+
+No migration is needed for this specific exam_sessions mismatch. The full application still needs verification against the live database and Gemini credentials; this patch alone is not a guarantee that every route is fully operational.

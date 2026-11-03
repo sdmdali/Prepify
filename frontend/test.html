@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Attempt your Prepify mock test.">
+    <title>Take Test | Prepify</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="test-page">
+
+    <header class="site-header test-header">
+        <nav class="navbar container">
+            <a href="dashboard.html" class="brand">Prepify<span>.</span></a>
+
+            <div class="test-header-info">
+                <span class="test-subject">Data Structures</span>
+                <span class="test-mode-label">Practice Test</span>
+            </div>
+
+            <div class="test-timer" aria-label="Remaining time">
+                <span class="timer-icon" aria-hidden="true">◷</span>
+                <span>29:45</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="test-container container">
+
+        <section class="test-progress">
+            <div class="test-progress-label">
+                <span>Question 1 of 10</span>
+                <span>10% completed</span>
+            </div>
+
+            <div class="test-progress-track">
+                <div class="test-progress-fill"></div>
+            </div>
+        </section>
+
+        <div class="test-layout">
+
+            <section class="question-panel">
+
+                <div class="question-meta">
+                    <span class="question-number">QUESTION 01</span>
+                    <span class="question-difficulty">Easy</span>
+                </div>
+
+                <h1 class="question-title">
+                    This is a sample Question with sample options.
+                </h1>
+
+                <p class="question-instruction">
+                    Select one correct answer.
+                </p>
+
+                <div class="answer-options">
+
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="a">
+                        <span class="answer-letter">A</span>
+                        <span class="answer-text">Option A</span>
+                    </label>
+
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="b">
+                        <span class="answer-letter">B</span>
+                        <span class="answer-text">Option B</span>
+                    </label>
+
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="c">
+                        <span class="answer-letter">C</span>
+                        <span class="answer-text">Option C</span>
+                    </label>
+
+                    <label class="answer-option">
+                        <input type="radio" name="answer" value="d">
+                        <span class="answer-letter">D</span>
+                        <span class="answer-text">Option D</span>
+                    </label>
+
+                </div>
+
+                <div class="question-actions">
+                    <button type="button" class="btn btn-secondary" disabled>
+                        ← Previous
+                    </button>
+
+                    <button type="button" class="btn btn-primary">
+                        Next question →
+                    </button>
+                </div>
+
+            </section>
+
+            <aside class="question-sidebar">
+
+                <div class="sidebar-card">
+                    <h2>Question palette</h2>
+                    <p class="palette-description">
+                        Navigate through your questions.
+                    </p>
+
+                    <div class="question-palette">
+                        <button type="button" class="palette-number current">1</button>
+                        <button type="button" class="palette-number">2</button>
+                        <button type="button" class="palette-number">3</button>
+                        <button type="button" class="palette-number">4</button>
+                        <button type="button" class="palette-number">5</button>
+                        <button type="button" class="palette-number">6</button>
+                        <button type="button" class="palette-number">7</button>
+                        <button type="button" class="palette-number">8</button>
+                        <button type="button" class="palette-number">9</button>
+                        <button type="button" class="palette-number">10</button>
+                    </div>
+
+                    <div class="palette-legend">
+                        <span><i class="legend-dot answered"></i> Answered</span>
+                        <span><i class="legend-dot unanswered"></i> Unanswered</span>
+                        <span><i class="legend-dot current-dot"></i> Current</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-card submit-card">
+                    <h3>Ready to finish?</h3>
+                    <p>Review your answers before submitting your test.</p>
+
+                    <button type="button" class="btn btn-primary submit-test-btn">
+                        Submit test
+                    </button>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer test-footer">
+        <p>© 2026 Prepify. Prepare smarter.</p>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>

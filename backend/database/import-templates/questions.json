@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "subject": "java",
+      "topic": "Collections",
+      "question": "Which interface does ArrayList implement?",
+      "options": ["List", "Map", "Set", "Queue"],
+      "correctIndex": 0,
+      "difficulty": "easy",
+      "marks": 1,
+      "explanation": "ArrayList implements java.util.List."
+    }
+  ]
+}

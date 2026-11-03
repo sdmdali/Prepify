@@ -1,0 +1,2 @@
+subject,topic,question,optionA,optionB,optionC,optionD,correct,difficulty,marks,explanation
+java,Collections,Which interface does ArrayList implement?,List,Map,Set,Queue,A,easy,1,ArrayList implements java.util.List.

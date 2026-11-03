@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your Prepify test results.">
+    <title>Test Results | Prepify</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="index.html" class="brand">Prepify<span>.</span></a>
+
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="results-page container">
+
+        <section class="results-heading">
+            <p class="eyebrow">TEST SUMMARY</p>
+            <h1>Your results</h1>
+            <p>Review your performance and revisit the questions from your test.</p>
+        </section>
+
+        <section class="results-overview">
+            <div class="results-score">
+                <span class="results-label">Your score</span>
+                <div class="score-placeholder">— <span>/ —</span></div>
+                <p>Score and percentage will appear here.</p>
+            </div>
+
+            <div class="results-stats">
+                <article class="result-stat correct-stat">
+                    <span class="result-stat-label">Correct answers</span>
+                    <h2>—</h2>
+                </article>
+
+                <article class="result-stat incorrect-stat">
+                    <span class="result-stat-label">Incorrect answers</span>
+                    <h2>—</h2>
+                </article>
+
+                <article class="result-stat unanswered-stat">
+                    <span class="result-stat-label">Unanswered</span>
+                    <h2>—</h2>
+                </article>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-section-heading">
+                <h2>Performance overview</h2>
+                <p>A summary of your performance will appear here.</p>
+            </div>
+
+            <div class="performance-placeholder">
+                <p>Performance breakdown</p>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-section-heading">
+                <h2>Question review</h2>
+                <p>Review your answers and the correct answers for each question.</p>
+            </div>
+
+            <div class="review-placeholder">
+                <p>Question-by-question review will appear here.</p>
+            </div>
+        </section>
+
+        <div class="results-actions">
+            <a href="dashboard.html" class="btn btn-secondary">Back to dashboard</a>
+            <a href="test-setup.html" class="btn btn-primary">Try another test</a>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Prepify. Prepare smarter.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>

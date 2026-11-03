@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the Prepify question bank.">
+    <title>Question Bank | Prepify</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/question-bank.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="index.html" class="brand">Prepify<span>.</span></a>
+
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="question-bank-page container">
+
+        <section class="question-bank-heading">
+            <p class="eyebrow">YOUR STUDY LIBRARY</p>
+            <h1>Question bank</h1>
+            <p>Explore questions and focus your practice on the topics that matter.</p>
+        </section>
+
+        <section class="question-bank-filters">
+            <div class="form-group search-group">
+                <label for="question-search">Search questions</label>
+                <input
+                    type="search"
+                    id="question-search"
+                    name="search"
+                    placeholder="Search by topic or keyword"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="question-subject">Subject</label>
+                <select id="question-subject" name="subject">
+                    <option value="">All subjects</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="question-difficulty">Difficulty</label>
+                <select id="question-difficulty" name="difficulty">
+                    <option value="">All levels</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="question-bank-results">
+
+            <div class="question-bank-toolbar">
+                <div>
+                    <h2>Available questions</h2>
+                    <p>Questions from your selected subjects will appear here.</p>
+                </div>
+            </div>
+
+            <div class="question-bank-empty">
+                <div class="empty-state-icon" aria-hidden="true">?</div>
+                <h3>No questions to display yet</h3>
+                <p>The question bank will appear here when questions are available.</p>
+            </div>
+
+            <nav class="question-bank-pagination" aria-label="Question bank pages">
+                <button type="button" class="btn btn-secondary" disabled>Previous</button>
+                <span>—</span>
+                <button type="button" class="btn btn-secondary" disabled>Next</button>
+            </nav>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Prepify. Prepare smarter.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/question-bank.js"></script>
+</body>
+</html>

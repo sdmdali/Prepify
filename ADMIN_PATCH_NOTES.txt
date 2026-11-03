@@ -1,0 +1,14 @@
+Prepify admin content-management patch
+
+Changed only:
+- frontend/admin.html: enabled the three existing Content Management buttons and assigned IDs.
+- frontend/js/admin.js: added admin-only subject/topic management, question listing/deletion, and examination listing/cancellation dialogs using existing API routes.
+- frontend/css/admin.css: added styles for those admin dialogs only.
+
+Validation performed:
+- `node --check frontend/js/admin.js` passed.
+- `node --check backend/src/services/exam.service.js` passed.
+- `node backend/scripts/verify-source.js` passed: 71 JavaScript files passed syntax checks.
+
+Important limitation:
+This is not yet an end-to-end verified release. This environment does not have the user's MySQL database or Gemini credentials, and integration tests against those services were not run. Source inspection found a potential database schema mismatch between `backend/database/migrations/001_initial_schema.sql` and the question repository (the repository references columns such as `question_type`, `correct_option_key`, `active`, and `source_reference` that are not defined in the initial migration). This may cause AI exam creation to return HTTP 500 when the database was created from that migration. Compare against the actual database schema and create a safe migration before deploying. Do not run destructive schema changes against an existing database.

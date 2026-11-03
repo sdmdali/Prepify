@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your Prepify test history.">
+    <title>Test History | Prepify</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="index.html" class="brand">Prepify<span>.</span></a>
+
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn btn-secondary">Dashboard</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="history-page container">
+
+        <section class="history-heading">
+            <p class="eyebrow">YOUR PROGRESS</p>
+            <h1>Test history</h1>
+            <p>Review your previous attempts and keep track of your preparation.</p>
+        </section>
+
+        <section class="history-overview">
+            <div class="history-summary-card">
+                <span class="history-summary-label">Total attempts</span>
+                <h2>—</h2>
+            </div>
+
+            <div class="history-summary-card">
+                <span class="history-summary-label">Average score</span>
+                <h2>—</h2>
+            </div>
+
+            <div class="history-summary-card">
+                <span class="history-summary-label">Best score</span>
+                <h2>—</h2>
+            </div>
+        </section>
+
+        <section class="history-content">
+
+            <div class="history-toolbar">
+                <div>
+                    <h2>All attempts</h2>
+                    <p>Your completed practice tests and examinations.</p>
+                </div>
+
+                <div class="history-filters">
+                    <label for="history-type">Test type</label>
+                    <select id="history-type" name="historyType">
+                        <option value="all">All tests</option>
+                        <option value="practice">Practice tests</option>
+                        <option value="college">College examinations</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="history-table-wrapper">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Test name</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Score</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Review</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="6" class="history-empty">
+                                Your test history will appear here once records are available.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <div class="history-actions">
+            <a href="test-setup.html" class="btn btn-primary">Start a practice test</a>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Prepify. Prepare smarter.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/history.js"></script>
+</body>
+</html>

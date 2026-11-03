@@ -1,0 +1,234 @@
+
+/* =========================================
+   TEST HISTORY PAGE
+========================================= */
+
+.history-page {
+    max-width: 1100px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+}
+
+/* Page Heading */
+
+.history-heading {
+    margin-bottom: 32px;
+}
+
+.history-heading h1 {
+    margin: 0 0 12px;
+    color: #333333;
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1.2;
+}
+
+.history-heading > p:last-child {
+    margin: 0;
+    color: #777777;
+    line-height: 1.7;
+}
+
+/* Summary Cards */
+
+.history-overview {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.history-summary-card {
+    padding: 24px;
+    border: 1px solid #EAE5E1;
+    border-radius: 18px;
+    background: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(50, 40, 40, 0.035);
+}
+
+.history-summary-card:nth-child(1) {
+    background: #F8E9EB;
+}
+
+.history-summary-card:nth-child(2) {
+    background: #E5F2F8;
+}
+
+.history-summary-card:nth-child(3) {
+    background: #F0F7ED;
+}
+
+.history-summary-label {
+    color: #777777;
+    font-size: 14px;
+}
+
+.history-summary-card h2 {
+    margin: 14px 0 0;
+    color: #333333;
+    font-size: 30px;
+}
+
+/* History Content */
+
+.history-content {
+    padding: 28px;
+    border: 1px solid #EAE5E1;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(50, 40, 40, 0.035);
+}
+
+.history-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.history-toolbar h2 {
+    margin: 0 0 8px;
+    color: #333333;
+    font-size: 22px;
+}
+
+.history-toolbar p {
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Filter */
+
+.history-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 190px;
+}
+
+.history-filters label {
+    color: #444444;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.history-filters select {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #DED4CE;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #444444;
+    font: inherit;
+    outline: none;
+}
+
+.history-filters select:focus {
+    border-color: #CE96A0;
+    box-shadow: 0 0 0 3px rgba(206, 150, 160, 0.18);
+}
+
+/* Table */
+
+.history-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #EAE5E1;
+    border-radius: 12px;
+}
+
+.history-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.history-table th {
+    padding: 16px;
+    background: #FAF8F6;
+    color: #666666;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.history-table td {
+    padding: 18px 16px;
+    border-top: 1px solid #F0EBE8;
+    color: #555555;
+    font-size: 14px;
+}
+
+.history-empty {
+    height: 130px;
+    text-align: center;
+    color: #888888 !important;
+    line-height: 1.7;
+}
+
+/* Actions */
+
+.history-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+.history-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    text-decoration: none;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+    .history-page {
+        padding-top: 32px;
+        padding-bottom: 44px;
+    }
+
+    .history-overview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .history-summary-card {
+        padding: 20px;
+    }
+
+    .history-content {
+        padding: 20px;
+    }
+
+    .history-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .history-filters {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-content {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .history-toolbar h2 {
+        font-size: 20px;
+    }
+
+    .history-actions .btn {
+        width: 100%;
+    }
+}

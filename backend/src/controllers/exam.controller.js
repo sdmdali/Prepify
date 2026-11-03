@@ -1,0 +1,12 @@
+'use strict';
+const svc = require('../services/exam.service');
+const { ok } = require('../utils/respond');
+exports.join = async (req, res) => ok(res, await svc.join(req.user, req.body.code));
+exports.start = async (req, res) => { const r = await svc.startAttempt(req.user, req.params.id); ok(res, r, r.resumed ? 200 : 201); };
+exports.create = async (req, res) => ok(res, await svc.create(req.user, req.body), 201);
+exports.createAi = async (req, res) => ok(res, await svc.createAiExam(req.user, req.body), 201);
+exports.cancel = async (req, res) => ok(res, await svc.cancel(req.user, req.params.id));
+exports.list = async (req, res) => ok(res, await svc.adminList(req.query));
+exports.participants = async (req, res) => ok(res, { items: await svc.participants(req.params.id) });
+exports.logs = async (req, res) => ok(res, { items: await svc.logs(req.params.id, req.query) });
+exports.results = async (req, res) => ok(res, { items: await svc.results(req.params.id) });
